@@ -1,0 +1,42 @@
+newman: Newman v4 deprecates support for the v1 collection format
+  Use the Postman Native app to export collections in the v2 format
+
+newman
+
+newmanTest
+
+→ GET with URL Params
+  GET http://httpbin.org/get?lol=true [200 OK, 666B, 214ms]
+  ✓  Response contains params
+
+→ POST with JSON body
+  POST http://httpbin.org/post [200 OK, 828B, 95ms]
+  ✓  Check POST param in response
+
+→ DELETE request
+  DELETE http://httpbin.org/delete [200 OK, 702B, 126ms]
+  ✓  Status code is 200
+
+→ PUT with form data
+  PUT http://httpbin.org/put [200 OK, 811B, 94ms]
+  ✓  Test form data
+
+┌─────────────────────────┬────────────────────┬───────────────────┐
+│                         │           executed │            failed │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              iterations │                  1 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│                requests │                  4 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│            test-scripts │                  4 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│      prerequest-scripts │                  0 │                 0 │
+├─────────────────────────┼────────────────────┼───────────────────┤
+│              assertions │                  4 │                 0 │
+├─────────────────────────┴────────────────────┴───────────────────┤
+│ total run duration: 647ms                                        │
+├──────────────────────────────────────────────────────────────────┤
+│ total data received: 2.04KB (approx)                             │
+├──────────────────────────────────────────────────────────────────┤
+│ average response time: 132ms [min: 94ms, max: 214ms, s.d.: 48ms] │
+└──────────────────────────────────────────────────────────────────┘
